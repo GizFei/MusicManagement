@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Giz Music Player</title>
+    <link rel="icon" href="/static/ico.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/static/Untitled.css">
+  <link rel="stylesheet" href="/static/Untitled.scss">
+</head>
+
+<body>
+    <p style="display: none;" id="catalog">{{ catalog }}</p>
+    <p style="display: none;" id="serial">{{ serial }}</p>
+  <div class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 p-3">
+          <div class="card box-shadow shadow" style="width: 332px; height: 490px;">
+            <div class="card-img-div" data-index="0">
+              <img class="card-img-top" src="">
+            </div>
+            <div class="card-body">
+              <p class="card-text lead">This is a wider card text.</p>
+              <p class="singer-text">Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8 lyric p-3" style="overflow: hidden; height: 500px; padding: auto;">
+          <p class="lead my-1"> test </p>
+            <p class="lead my-1"> test </p>
+            <p class="lead my-1 active"> test </p><p class="lead my-1"> test </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-2">
+    <div class="container">
+      <div class="row">
+        <div class="text-center col-md-4">
+          <i class="fa fa-step-backward mx-3"></i>
+          <i class="fa fa-play mx-3"></i>
+          <i class="fa fa-step-forward mx-3"></i>
+            <audio src="" style="display: none;" id="audio"></audio>
+        </div>
+        <div class="col-md-6 slider-c" style="">
+          <input type="range" min="0" max="400" value="0" class="slider my-3" style="">
+        </div>
+          <div class="col-md-2 time">
+              <p style="color: #CCC; margin-top: 0.75rem;"><span id="ct"></span>&nbsp;/&nbsp;<span id="tt"></span></p>
+          </div>
+      </div>
+    </div>
+  </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="/static/js/play.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

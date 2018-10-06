@@ -1,0 +1,204 @@
+/*!
+* Wireframe Pingendo template (https://templates.pingendo.com)
+* Based on: Bootstrap v4.1.3 (https://getbootstrap.com)
+* Copyright 2014-2018 Pingendo (https://pingendo.com)
+*/
+ 
+// Options
+// 
+// Quickly modify global styling by enabling or disabling optional features.
+  
+$enable-rounded:            true !default;
+$enable-shadows:            true;
+$enable-transitions:        true;
+$enable-hover-media-query:  false;
+$enable-grid-classes:       true;
+$enable-print-styles:       true;
+
+// Variables
+//
+// Colors
+
+$theme-colors: (
+  primary: #cdcdcd,
+  secondary: #b0b0b0,
+  light: #eaeaea,
+  dark: #555555,
+  info: #8e8e8e,
+  success: #28a745,
+  warning: #ffc107,
+  danger: #dc3545
+);
+
+$body-bg: white;
+$body-color: #333;
+
+
+$body-color-inverse: invert($body-color) !default;
+$link-color: #8e8e8e;
+
+// Fonts
+$font-family-base: Trebuchet MS, Helvetica, sans-serif;
+$headings-font-family: $font-family-base;
+$display-font-family: $font-family-base;
+$font-weight-normal: 200;
+$headings-font-weight: 200;
+$headings-font-weight: $font-weight-normal;
+$lead-font-size:   1.30rem;
+$lead-font-weight:   300;
+$spacer: 1.5rem;
+$font-size-base: 1rem;
+$font-weight-light: 300;
+$font-weight-bold: 700;
+$font-weight-base: $font-weight-normal;
+$line-height-base: 1.5;
+$headings-line-height: 1.2;
+
+@import 'bootstrap-4.1.3';
+
+ 
+html,body {
+   height:100%;
+}
+
+// Color yiq
+@each $name, $value in $theme-colors {
+  .bg-#{$name} {
+    color: color-yiq($value);
+   	input::placeholder {
+      color: transparentize(color-yiq($value), .2);
+    }
+    .input-group-text {
+      color: color-yiq($value);
+    }
+  }
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.cover {
+	min-height:100%;
+}
+
+.text-muted {
+  line-height: 40px;
+}
+
+.contact-p {
+  font-size: 30px;
+  margin-bottom: 24px;
+  margin-left: 24px;
+}
+
+.qq {
+  margin-left: 10px;
+  margin-right: 36px;
+}
+
+.copyright {
+  margin-top: 24px;
+}
+
+.fa-weibo, .fa-qq, .fa-wechat, .fa-twitter {
+  border-bottom: transparent;
+  border-bottom-style: solid;
+}
+.fa-weibo:hover, .fa-qq:hover, .fa-wechat:hover, .fa-twitter:hover{
+  cursor: pointer;
+  border-bottom: black;
+  border-bottom-style: solid;
+}
+
+.span {
+  background: blue;
+  margin-bottom: 9px;
+}
+
+.nav-pills {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.current{
+  z-index: 2;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(205, 205, 205, 0.25);
+}
+
+.card-text{
+  height: 60px;
+}
+
+.text-info{
+  line-height: 2em;
+}
+
+.tab-side{
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  left: 0;
+  font-size: 20px;
+}
+
+.card-img-div:hover .card-img-top{
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.card-img-div:hover .icon-play{
+  opacity: 0.9;
+  transform: scale(0.8);
+  transition: 0.5s;
+}
+
+.icon-play:hover{
+  cursor: pointer;
+}
+
+.icon-play{
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  font-size: 80px;
+  color: white;
+  opacity: 0;
+}
+
+@media screen and (max-width: 990px){
+  .card-body p.lead{
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 990px) {
+  .icon-play{
+    position: absolute;
+  	top: 15%;
+  	left: 35%;
+  	font-size: 80px;
+  	color: white;
+  	opacity: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .icon-play{
+    position: absolute;
+  	top: 28%;
+  	left: 45%;
+  	font-size: 80px;
+  	color: white;
+  	opacity: 0;
+  }
+}
+
+
+
+
+
+

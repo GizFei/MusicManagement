@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/static/ico.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/static/file.css">
+</head>
+
+<body>
+  <div class="py-4" style="margin-top: 20px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <i class="fa fa-file-image-o fa-4x" style="color: #4f70ce">
+            <span style="font-size: 30px; color: black;">&nbsp;&nbsp;&nbsp;&nbsp;图片格式转换</span>
+          </i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-1">
+    <div class="container">
+      <div class="row">
+          <form action="/file" method="post" enctype="multipart/form-data">
+          <div class="text-left">
+              <input type="file" id="file" name="imgfile" accept="image/gif,image/tiff, image/x-png, image/jpeg" style="display: none;" /><label for="file" class="btn btn-primary btn-lg mx-2 " href="#">选择文件</label>
+              <span class="lead filename my-1"> 未选择文件 </span>
+          <input type="submit" class="btn btn-primary btn-lg mx-2" href="javascript:;" id="submit" value="转换成png" style="right: 0;">
+              </div>
+              
+          </form>
+      </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="lead text-muted my-0 msg">{{msg}}</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="p-2" style="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row my-2">
+            <div class="col-md-12">
+              <h2 class="">原图</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6"><img class="img-fluid d-block src-img" src="/static/photo.jpg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="/static/js/file.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

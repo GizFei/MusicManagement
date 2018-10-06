@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- PAGE settings -->
+  <link rel="icon" href="/static/ico.png">
+  <title>Giz Album</title>
+  <meta name="description" content="Giz design of an album with wireframe of Pingendo">
+  <meta name="author" content="Giz">
+  <!-- CSS dependencies -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/static/wireframe.css" type="text/css">
+  <link rel="stylesheet" href="/static/wireframe.scss" type="text/css">
+</head>
+
+<body>
+  <div class="navbar navbar-dark bg-dark" style="">
+    <div class="container d-flex justify-content-between">
+      <a href="album.html" class="navbar-brand d-flex align-items-center"><i class="fa d-inline fa-camera mr-2"></i><strong>Album</strong> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"> <span class="navbar-toggler-icon"></span> </button>
+    </div>
+  </div>
+  <div class="collapse bg-dark" id="navbarHeader" style="">
+    <div class="container">
+      <div class="row">
+        <div class="py-4 col-md-8" style="">
+          <h4>关于</h4>
+          <p class="text-info">CSS：Bootstrap 4，Wireframe.css，Wireframe.scss（集成自定义样式）<br>JS: jQuery 3，customize.js（自定义JS）<br>音乐来源：QQ音乐<br>制作人：Giz</p>
+        </div>
+        <div class="py-4 col-md-4" style="">
+          <h4>播放</h4>
+          <p class="text-info" style="">&gt; 可在本页面直接播放<br>&gt; 同一时间只能播放一首歌曲<br>&gt; 播放时右下角会显示当前进度<br>&gt; 点击"Listen"按钮进入播放界面</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center py-5">
+    <div class="container">
+      <div class="row my-5 justify-content-center">
+        <div class="col-md-9" style="">
+          <h1>Giz Album</h1>
+          <p class="lead text-muted my-3">这是我随机收集的100多首歌，听过之后根据个人喜好<br>分为“Like”和“Dislike”两个类别展示。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-4 bg-light">
+    <div class="container">
+      <div class="row nav-catalog">
+        <div class="col-md-12" style="">
+          <ul class="nav nav-pills shadow-sm mx-2">
+            <li class="nav-item" id="like"> <a class="active nav-link" href="javascript:;">Like</a> </li>
+            <li class="nav-item" id="dislike"> <a href="javascript:;" class="nav-link">Dislike</a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row nav-catalog" id="nav-catalog" style="display:none;">
+        <div class="col-md-12" style="">
+          <ul class="nav nav-pills shadow-sm mx-2 tab-side flex-column">
+            <li class="nav-item" id="like"> <a class="active nav-link" href="javascript:;">Like</a> </li>
+            <li class="nav-item" id="dislike"> <a href="javascript:;" class="nav-link">Dislike</a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row" id="song-content">
+        <div class="col-md-4 p-3">
+          <div class="card box-shadow">
+            <div class="card-img-div" data-index="0">
+              <img class="card-img-top" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg">
+              <i class="fa fa-play-circle-o icon-play" data-index="0"></i>
+            </div>
+            <audio id="audio-1" preload="none" src="">
+            </audio>
+            <div class="card-body">
+              <p class="card-text lead">This is a wider card text.</p>
+              <p class="singer-text">Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary btn-listen" data-song="">Listen</button>
+                </div> <small class="text-muted song-time">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 p-3">
+          <div class="card box-shadow">
+            <div class="card-img-div" data-index="1">
+              <img class="card-img-top" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg">
+              <i class="fa fa-play-circle-o icon-play" data-index="1"></i>
+            </div>
+            <audio id="audio-2" preload="none" src="" style="">
+            </audio>
+            <div class="card-body">
+              <p class="card-text lead">This is a wider card text.</p>
+              <p class="singer-text" contenteditable="true">Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary btn-listen" data-song="">Listen</button>
+                </div> <small class="text-muted song-time">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 p-3">
+          <div class="card box-shadow">
+            <div class="card-img-div" data-index="2">
+              <img class="card-img-top" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg">
+              <i class="fa fa-play-circle-o icon-play" data-index="2"></i>
+            </div>
+            <audio id="audio-3" preload="none" src="">
+            </audio>
+            <div class="card-body">
+              <p class="card-text lead">This is a wider card text.</p>
+              <p class="singer-text">Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary btn-listen" data-song="">LIsten</button>
+                </div> <small class="text-muted song-time">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 p-3">
+          <div class="card box-shadow">
+            <div class="card-img-div" data-index="3">
+              <img class="card-img-top" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg">
+              <i class="fa fa-play-circle-o icon-play" data-index="3"></i>
+            </div>
+            <audio id="audio-4" preload="none" src="">
+            </audio>
+            <div class="card-body">
+              <p class="card-text lead">This is a wider card text.</p>
+              <p class="singer-text">Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary btn-listen" data-song="">Listen</button>
+                </div> <small class="text-muted song-time">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 p-3">
+          <div class="card box-shadow">
+            <div class="card-img-div" data-index="4">
+              <img class="card-img-top" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg">
+              <i class="fa fa-play-circle-o icon-play" data-index="4"></i>
+            </div>
+            <audio id="audio-5" preload="none" src="">
+            </audio>
+            <div class="card-body">
+              <p class="card-text lead">This is a wider card text.</p>
+              <p class="singer-text">Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary btn-listen" data-song="">Listen</button>
+                </div> <small class="text-muted song-time">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 p-3">
+          <div class="card box-shadow">
+            <div class="card-img-div" data-index="5">
+              <img class="card-img-top" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg">
+              <i class="fa fa-play-circle-o icon-play" data-index="5"></i>
+            </div>
+            <audio id="audio-6" preload="none" src="">
+            </audio>
+            <div class="card-body">
+              <p class="card-text lead">This is a wider card text.</p>
+              <p class="singer-text">Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary btn-listen" data-song="">Listen</button>
+                </div> <small class="text-muted song-time">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 p-3">
+          <div class="card box-shadow">
+            <div class="card-img-div" data-index="6">
+              <img class="card-img-top" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg">
+              <i class="fa fa-play-circle-o icon-play" data-index="6"></i>
+            </div>
+            <audio id="audio-7" preload="none" src="">
+            </audio>
+            <div class="card-body">
+              <p class="card-text lead">This is a wider card text.</p>
+              <p class="singer-text">Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary btn-listen" data-song="">Listen</button>
+                </div> <small class="text-muted song-time">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 p-3">
+          <div class="card box-shadow">
+            <div class="card-img-div" data-index="7">
+              <img class="card-img-top" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg">
+              <i class="fa fa-play-circle-o icon-play" data-index="7"></i>
+            </div>
+            <audio id="audio-8" preload="none" src="">
+            </audio>
+            <div class="card-body">
+              <p class="card-text lead">This is a wider card text.</p>
+              <p class="singer-text">Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary btn-listen" data-song="">Listen</button>
+                </div> <small class="text-muted song-time">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 p-3">
+          <div class="card box-shadow">
+            <div class="card-img-div" data-index="8">
+              <img class="card-img-top" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg">
+              <i class="fa fa-play-circle-o icon-play" data-index="8"></i>
+            </div>
+            <audio id="audio-9" preload="none" src="">
+            </audio>
+            <div class="card-body">
+              <p class="card-text lead">This is a wider card text.</p>
+              <p class="singer-text">Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary btn-listen" data-song="">Listen</button>
+                </div> <small class="text-muted song-time">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="pagination mx-2 pagination-lg py-3 justify-content-center" id="pagination"> {lis}
+            <!--
+            <li class="page-item" id="prev"> <a class="page-link" href="#"> <span>«</span> <span class="sr-only">Previous</span> </a> </li>
+            <li class="page-item" id="1"> <a class="page-link" href="#">1</a> </li>
+            <li class="page-item" id="2"> <a class="page-link" href="#">2</a> </li>
+            <li class="page-item" id="3"> <a class="page-link" href="#">3</a> </li>
+            <li class="page-item" id="4"> <a class="page-link" href="#">4</a> </li>
+            <li class="page-item" id="next"> <a class="page-link" href="#"> <span>»</span> <span class="sr-only">Next</span> </a> </li>
+            -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="page-footer font-small cyan darken-3">
+    <div class="container">
+      <div class="row text-left" style="margin-top: 40px;">
+        <div class="lead contact-p"> Contact Me: </div>
+        </div>
+    <div class="row text-left px-2">
+        <div class="col-md-8 py-1">
+          <div class="flex-left mx-auto p-2">
+            <!-- Weibo -->
+            <i class="fa fa-weibo text-muted mr-md-5 mr-3 fa-2x" data-toggle="popover" data-placement="bottom" data-content="@小郭Giz" data-trigger="hover"> </i>
+            <!-- QQ +-->
+            <i class="fa fa-qq text-muted mr-md-5 mr-3 fa-2x" data-toggle="popover" data-placement="bottom" data-content="QQ: 1150847818" data-trigger="hover"> </i>
+            <!--Wechat -->
+            <i class="fa fa-wechat text-muted mr-md-5 mr-3 fa-2x" data-toggle="popover" data-placement="bottom" data-content="WeChat: Gae1150847818" data-trigger="hover"> </i>
+              <!-- Twitter -->
+            <i class="fa fa-twitter text-muted fa-2x" data-toggle="popover" data-placement="bottom" data-content="@FeiGiz" data-trigger="hover"> </i>
+          </div>
+        </div>
+          <div class="col-md-4 text-center">
+              <p class="lead my-0">Bonus:&nbsp;&nbsp;<a class="fa fa-file-image-o file-img" style="font-size: 28px;" href="file"></a></p>
+              <p class="my-2">(图片格式转换)</p>
+          </div>
+      </div>
+      </div>
+    <div class="footer-copyright text-center py-3">© 2018 Copyright: <a href="https://mdbootstrap.com/bootstrap-tutorial/" class="text-dark">Fei Giz</a>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/static/js/customize.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous" style=""></script>
+</body>
+
+</html>
